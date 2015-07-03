@@ -22,5 +22,4 @@ while y < 8:
     else:
       x, y, pairs, myset = eq.allclean()
 
-for x in pairs:
-  print x
+print pairs
