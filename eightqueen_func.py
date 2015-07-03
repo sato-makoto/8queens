@@ -79,8 +79,7 @@ def rest_line_length(y, setz):
 def allclean():
   x  = randselect(8)
   y = 0
-  pairs = []
+  pairs = set()
   myset = set()
   makemyset(myset)
   return x, y, pairs, myset
-
