@@ -6,12 +6,14 @@ x, y, pairs, myset = eq.allclean()
 
 while y < 8:
   if y == 7 and eq.rest_line_length(y, myset) == 1:
-    pairs.add(myset.pop())
+    temp = myset.pop()
+    x, y = int(temp[0]), int(temp[2])
+    pairs.insert(10, [x, y])
     break
   else:
     if eq.rest_line_length(y, myset):
       eq.mybatch(x, y, myset)
-      pairs.add('{}-{}'.format(x, y)) 
+      pairs.insert(10,[x, y])
       y+=1
       ylines = eq.ylines(y, myset)
       ylength = len(ylines)
