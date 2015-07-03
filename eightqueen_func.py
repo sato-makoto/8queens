@@ -76,3 +76,11 @@ def rest_line_length(y, setz):
       templist.insert(1,z)
   return len(templist)
 
+def allclean():
+  x  = randselect(8)
+  y = 0
+  pairs = set()
+  myset = set()
+  makemyset(myset)
+  return x, y, pairs, myset
+
