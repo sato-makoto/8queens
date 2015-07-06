@@ -6,7 +6,7 @@ mylist = eq.get_queens_pattern()
 
 ynumstr ="   0 1 2 3 4 5 6 7"
 ylist = ['', '', '', '', '', '', '', '']
-queen = 'Q'
+queen = u'\u2655'
 
 xlist = []
 pref = suff = ''
