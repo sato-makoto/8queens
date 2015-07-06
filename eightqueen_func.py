@@ -84,3 +84,23 @@ def allclean():
   makemyset(myset)
   return x, y, pairs, myset
 
+def get_queens_pattern():
+  x, y, pairs, myset = allclean()
+  while y < 8:
+    if y == 7 and rest_line_length(y, myset) == 1:
+      temp = myset.pop()
+      x, y = int(temp[0]), int(temp[2])
+      pairs.insert(10, [x, y])
+      break
+    else:
+      if rest_line_length(y, myset):
+        mybatch(x, y, myset)
+        pairs.insert(10,[x, y])
+        y+=1
+        yline = ylines(y, myset)
+        ylength = len(yline)
+        if ylength:
+          x = int(yline[randselect(ylength)][0])
+      else:
+        x, y, pairs, myset = allclean()
+  return  pairs
