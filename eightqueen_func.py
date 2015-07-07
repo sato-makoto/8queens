@@ -12,12 +12,12 @@ def q1(x, y):
   else:
     return True
 
-def makemyset(myset):
+def makemyset(setz):
   for f1 in range(8):
     for f2 in range(8):
       pair = '{}-{}'.format(f1, f2)
-      myset.add(pair)
-  return myset
+      setz.add(pair)
+  return setz
 
 def delpair(x, y, setz):
   pair = '{}-{}'.format(x, y)
@@ -50,7 +50,6 @@ def mybatch(x, y, zset):
   dely(y, zset)
   delplus(x, y, zset)
   addplus(x, y, zset)
-
 
 def randselect(n):
   random.seed()
