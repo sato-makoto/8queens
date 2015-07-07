@@ -1,17 +1,5 @@
 import random
 
-def q0(x, y):
-  if (x == 0) or (y == 7):
-    return False
-  else:
-    return True
-
-def q1(x, y):
-  if (x == 7) or (y == 7):
-    return False
-  else:
-    return True
-
 def makemyset(myset):
   for f1 in range(8):
     for f2 in range(8):
@@ -43,13 +31,6 @@ def addplus(x, y, setz):
    x+=1
    y+=1
    delpair(x, y, setz)
-
-def mybatch(x, y, zset):
-  delpair(x, y, zset)
-  delx(x, zset)
-  dely(y, zset)
-  delplus(x, y, zset)
-  addplus(x, y, zset)
 
 
 def randselect(n):
