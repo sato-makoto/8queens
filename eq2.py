@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import eightqueen_func as eq
 
-x, y, pairs, myset = eq.allclean()
+x, y, pairs, myset = eq.allclear()
 mylist = eq.get_queens_pattern()
 
 ynumstr ="   0 1 2 3 4 5 6 7"

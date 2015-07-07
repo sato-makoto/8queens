@@ -76,7 +76,7 @@ def rest_line_length(y, setz):
       templist.insert(1,z)
   return len(templist)
 
-def allclean():
+def allclear():
   x  = randselect(8)
   y = 0
   pairs = []
@@ -85,7 +85,7 @@ def allclean():
   return x, y, pairs, myset
 
 def get_queens_pattern():
-  x, y, pairs, myset = allclean()
+  x, y, pairs, myset = allclear()
   while y < 8:
     if y == 7 and rest_line_length(y, myset) == 1:
       temp = myset.pop()
@@ -102,5 +102,5 @@ def get_queens_pattern():
         if ylength:
           x = int(yline[randselect(ylength)][0])
       else:
-        x, y, pairs, myset = allclean()
+        x, y, pairs, myset = allclear()
   return  pairs
