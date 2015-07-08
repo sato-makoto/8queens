@@ -1,20 +1,23 @@
 import random
 
+width = 8
+last = width - 1
+
 def q0(x, y):
-  if (x == 0) or (y == 7):
+  if (x == 0) or (y == last):
     return False
   else:
     return True
 
 def q1(x, y):
-  if (x == 7) or (y == 7):
+  if (x == last) or (y == last):
     return False
   else:
     return True
 
 def makemyset(setz):
-  for f1 in range(8):
-    for f2 in range(8):
+  for f1 in range(width):
+    for f2 in range(width):
       pair = '{}-{}'.format(f1, f2)
       setz.add(pair)
   return setz
@@ -25,11 +28,11 @@ def delpair(x, y, setz):
     setz.remove(pair)
   
 def delx(x, setz):
-  for y in range(8):
+  for y in range(width):
     delpair(x, y, setz)
 
 def dely(y, setz):
-  for x in range(8):
+  for x in range(width):
     delpair(x, y, setz)
 
 def delplus(x, y, setz):
@@ -76,7 +79,7 @@ def rest_line_length(y, setz):
   return len(templist)
 
 def allclear():
-  x  = randselect(8)
+  x  = randselect(width)
   y = 0
   pairs = []
   myset = set()
@@ -85,8 +88,8 @@ def allclear():
 
 def get_queens_pattern():
   x, y, pairs, myset = allclear()
-  while y < 8:
-    if y == 7 and rest_line_length(y, myset) == 1:
+  while y < width:
+    if y == last and rest_line_length(y, myset) == 1:
       temp = myset.pop()
       x, y = int(temp[0]), int(temp[2])
       pairs.insert(10, [x, y])
