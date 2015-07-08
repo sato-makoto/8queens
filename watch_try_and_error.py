@@ -7,18 +7,18 @@ def get_deb_queens_pattern():
   print "Eight Queen Start!"
   i = 0
   x, y, pairs, myset = eq.allclear()
-  while y < 8:
+  while y < eq.width:
     time.sleep(0.5)
-    if y == 7 and eq.rest_line_length(y, myset) == 1:
+    if y == eq.width - 1 and eq.rest_line_length(y, myset) == 1:
       temp = myset.pop()
       x, y = int(temp[0]), int(temp[2])
-      pairs.insert(10, [x, y])
+      pairs.append([x, y])
       print "After {} times Fault, Now Success!".format(i)
       break
     else:
       if eq.rest_line_length(y, myset):
         eq.mybatch(x, y, myset)
-        pairs.insert(10,[x, y])
+        pairs.append([x, y])
         print pairs
         y+=1
         yline = eq.ylines(y, myset)
@@ -36,6 +36,4 @@ x, y, pairs, myset = eq.allclear()
 
 pairs =  get_deb_queens_pattern()
 print pairs
-
-
 
