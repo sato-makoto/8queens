@@ -68,14 +68,15 @@ def ylines(y, setz):
   templist = []
   for z in setz:
     if z[2] == str(y):
-      templist.insert(1,z)
+      templist.append(z)
   return templist
 
 def rest_line_length(y, setz):
   templist = []
   for z in setz:
     if z[2] == str(y):
-      templist.insert(1,z)
+      templist.append(z)
+#      print len(templist)
   return len(templist)
 
 def allclear():
@@ -92,12 +93,12 @@ def get_queens_pattern():
     if y == last and rest_line_length(y, myset) == 1:
       temp = myset.pop()
       x, y = int(temp[0]), int(temp[2])
-      pairs.insert(10, [x, y])
+      pairs.append([x, y])
       break
     else:
       if rest_line_length(y, myset):
         mybatch(x, y, myset)
-        pairs.insert(10,[x, y])
+        pairs.append([x, y])
         y+=1
         yline = ylines(y, myset)
         ylength = len(yline)
