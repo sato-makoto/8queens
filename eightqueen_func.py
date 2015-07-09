@@ -1,7 +1,7 @@
 import random
 
 from sys import argv
-if len(argv) == 2 and argv[1].isdigit():
+if len(argv) == 2 and argv[1].isdigit() and int(argv[1]) > 3:
   width = int(argv[1])
 else:
   width = 8
