@@ -26,6 +26,7 @@ for x in range(eq.width):
   yl = mylist[x][0]
   ylist[yl] = xlist[x][0] + queen + xlist[x][1]
 
+print ynumstr
 num = 0
 for x in ylist:
   print num, x
