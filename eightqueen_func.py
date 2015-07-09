@@ -20,7 +20,8 @@ def q1(x, y):
   else:
     return True
 
-def makemyset(setz):
+def makemyset():
+  setz = set()
   for f1 in range(width):
     for f2 in range(width):
       pair = '{}-{}'.format(f1, f2)
@@ -81,7 +82,6 @@ def rest_line_length(y, setz):
   for z in setz:
     if z[2] == str(y):
       templist.append(z)
-#      print len(templist)
   return len(templist)
 
 def allclear():
@@ -89,7 +89,7 @@ def allclear():
   y = 0
   pairs = []
   myset = set()
-  makemyset(myset)
+  myset = makemyset()
   return x, y, pairs, myset
 
 def get_queens_pattern():
