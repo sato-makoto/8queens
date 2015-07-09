@@ -1,11 +1,7 @@
 #!/usr/bin/env python
-from sys import argv
 import random
 import time
 import eightqueen_func as eq
-
-if len(argv) == 2 and argv[1].isdigit():
-  eq.width = int(argv[1])
 
 def get_deb_queens_pattern():
   print "{} Queens Start!".format(eq.width)

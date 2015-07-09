@@ -1,6 +1,11 @@
 import random
 
-width = 8
+from sys import argv
+if len(argv) == 2 and argv[1].isdigit():
+  width = int(argv[1])
+else:
+  width = 8
+
 last = width - 1
 
 def q0(x, y):
