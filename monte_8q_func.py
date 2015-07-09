@@ -1,6 +1,10 @@
 import random
+from sys import argv
 
-width = 8
+if len(argv) == 2 and argv[1].isdigit():
+  width = int(argv[1])
+else:
+  width = 8
 
 def queens():
   yset = [x for x in range(width)]
