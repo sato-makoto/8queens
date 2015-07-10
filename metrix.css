@@ -1,9 +1,21 @@
 table {
   border: 2px black solid;
-  align: center;
-  font-size: 2em;
+}
+td.none {
+  text-align: center;
+  font-size: 1em;
+}
+td.left {
+  text-align: right;
+  font-size: 1em;
 }
 td.gray {
-  align: center;
-  bgcolor: lightgray;
+  text-align: center;
+  background-color: lightgray;
+  font-size: 2em;
+}
+td.white {
+  text-align: center;
+  background-color: white;
+  font-size: 2em;
 }
