@@ -1,0 +1,9 @@
+table {
+  border: 2px black solid;
+  align: center;
+  font-size: 2em;
+}
+td.gray {
+  align: center;
+  bgcolor: lightgray;
+}
