@@ -41,7 +41,7 @@ def lines_out(queens_list,width):
     print '<tr>\n <td class="left">{}</td>'.format(x)
     for y in queens_list:
       if y[0] == x:
-         q = '_*_'
+         q = 'Q'
       else:
          q = ''
       print '  <td class="{}">{}</td>'.format(wglist[begin_color], q)
