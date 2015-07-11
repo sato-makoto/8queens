@@ -2,11 +2,13 @@ import eightqueen_func as eq
 
 classtaple = ('none', 'left', 'white', 'gray')
 
+"""
 def cross_x(qlist, width):
   clist = [None for y in range(width)]
   for x in qlist:
     clist[x[0]] =  x
   return clist  
+"""
 
 def html_header():
  header_file = 'html_header'
@@ -33,14 +35,15 @@ def table_first_line(width):
 
 def lines_out(queens_list,width):
   wglist = classtaple[2:]
-  new_queen_list = cross_x(queens_list, width)
+  q = ''
   for x in range(width):
     begin_color = x%2
     print '<tr>\n <td class="left">{}</td>'.format(x)
     for y in queens_list:
-      if y[1] = 
-
-
-      print '  <td class="{}"></td>'.format(wglist[begin_color])
+      if y[0] == x:
+         q = '_*_'
+      else:
+         q = ''
+      print '  <td class="{}">{}</td>'.format(wglist[begin_color], q)
       begin_color = (begin_color + 1) % 2
     print '</tr>'
