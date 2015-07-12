@@ -12,3 +12,10 @@ def randselect():
 
 def new_queen(x):
   return [x, randselect(),] 
+
+def compare(coo0, coo1):
+  if abs(coo0[0] - coo1[0]) == abs(coo0[1] - coo1[1]) \
+      or coo0[0] == coo1[0] or coo0[1] == coo1[1] :
+    return False
+  else:
+    return True
