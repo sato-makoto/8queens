@@ -1,3 +1,3 @@
 My Python Eight Queen
 
-use Monte Carlo Method
+Step by step
