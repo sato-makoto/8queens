@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import eightqueen_func as eq
 
 x, y, pairs, myset = eq.allclear()
@@ -13,7 +15,7 @@ ylist = []
 for x in range(eq.width):
   ylist.append('')
 
-queen = u'\u2655'
+queen = '♕'
 
 xlist = []
 pref = suff = ''
