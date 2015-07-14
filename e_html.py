@@ -4,7 +4,7 @@ import eightqueen_func as eq
 import html_rend as html
 
 x, y, pairs, myset = eq.allclear()
-mylist = eq.get_queens_pattern()
+mylist = eq.main(eq.width)
 
 head = html.html_header()
 for x in head:

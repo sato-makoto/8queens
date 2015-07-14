@@ -3,8 +3,9 @@
 
 import eightqueen_func as eq
 
-x, y, pairs, myset = eq.allclear()
-mylist = eq.get_queens_pattern()
+x, y, pairs, mylist = eq.allclear()
+
+mylist = eq.main(eq.width)
 
 ynumstr = ''
 for x in range(eq.width):
