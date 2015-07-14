@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 import eightqueen_func as eq
 import html_rend as html
 
@@ -11,6 +11,7 @@ for x in head:
   print x[:-1]
 
 print html.h1_out(eq.width)
+print html.h2_out()
 print html.first_line()
 html.table_first_line(eq.width)
 

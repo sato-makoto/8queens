@@ -1,9 +1,11 @@
-import eightqueen_func as eq
 # -*- coding: utf-8 -*-
+from time import localtime
+import eightqueen_func as eq
 
 
 classtaple = ('none', 'left', 'white', 'gray')
-
+y, mo , d, h, m, s, n, n, n  =  localtime()    
+datestr = '{}年{}月{}日 {}時{}分{}秒'.format(y, mo, d, h, m, s)
 
 def html_header():
  header_file = 'html_header'
@@ -18,6 +20,8 @@ def html_footer():
 def h1_out(width):
  return '<h1>{} Queens</h1>'.format(eq.width)
 
+def h2_out():
+ return '<h2> -- {}に作成しました --</h2>'.format(datestr)
 
 def first_line():
   return '<table>'
