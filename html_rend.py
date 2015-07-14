@@ -1,14 +1,9 @@
 import eightqueen_func as eq
+# -*- coding: utf-8 -*-
+
 
 classtaple = ('none', 'left', 'white', 'gray')
 
-"""
-def cross_x(qlist, width):
-  clist = [None for y in range(width)]
-  for x in qlist:
-    clist[x[0]] =  x
-  return clist  
-"""
 
 def html_header():
  header_file = 'html_header'
@@ -41,7 +36,7 @@ def lines_out(queens_list,width):
     print '<tr>\n <td class="left">{}</td>'.format(x)
     for y in queens_list:
       if y[0] == x:
-         q = 'Q'
+         q = '♕'
       else:
          q = ''
       print '  <td class="{}">{}</td>'.format(wglist[begin_color], q)
