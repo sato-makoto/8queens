@@ -24,7 +24,7 @@ def p_out():
  return '<p> -- {}に作成しました</p>'.format(datestr)
 
 def first_line():
-  return '<table>'
+  return '<table summary="Queens">'
 
 def table_first_line(width):
   print '<tr>\n  <td class="none"></td>'
