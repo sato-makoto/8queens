@@ -20,8 +20,8 @@ def html_footer():
 def h1_out(width):
  return '<h1>{} Queens</h1>'.format(eq.width)
 
-def h2_out():
- return '<h2> -- {}に作成しました</h2>'.format(datestr)
+def p_out():
+ return '<p> -- {}に作成しました</p>'.format(datestr)
 
 def first_line():
   return '<table>'

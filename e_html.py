@@ -11,7 +11,7 @@ for x in head:
   print x[:-1]
 
 print html.h1_out(eq.width)
-print html.h2_out()
+print html.p_out()
 print html.first_line()
 html.table_first_line(eq.width)
 

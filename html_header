@@ -2,8 +2,18 @@
 <HTML lang=ja>
 <head>
 <style>
+h1 {
+  margin: 20px 40px 10px; 
+}
+p {
+  margin: 20px 50px; 
+}
+  
 table {
   border: 2px black solid;
+  width: 50%;
+  height: 75%;
+  margin: 40px; 
 }
 td.none {
   text-align: center;
