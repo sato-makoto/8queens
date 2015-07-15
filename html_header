@@ -16,7 +16,7 @@ p {
   
 table {
   border: 2px black solid;
-  width: 50%;
+  width: 58%;
   height: 75%;
   margin: 40px; 
 }
