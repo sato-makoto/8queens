@@ -21,7 +21,7 @@ def h1_out(width):
  return '<h1>{} Queens</h1>'.format(eq.width)
 
 def h2_out():
- return '<h2> -- {}に作成しました --</h2>'.format(datestr)
+ return '<h2> -- {}に作成しました</h2>'.format(datestr)
 
 def first_line():
   return '<table>'
@@ -39,8 +39,10 @@ def lines_out(queens_list,width):
     begin_color = x%2
     print '<tr>\n <td class="left">{}</td>'.format(x)
     for y in queens_list:
-      if y[0] == x:
+      if y[0] == x and begin_color%2 == 0:
          q = '♕'
+      elif y[0] == x and begin_color%2 == 1:
+         q = '♛'
       else:
          q = ''
       print '  <td class="{}">{}</td>'.format(wglist[begin_color], q)
