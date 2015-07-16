@@ -49,9 +49,6 @@ def main(width):
   x, y, pairs, mylist = allclear()
   while y < width:
     next_list = ylist(y, mylist)
-    if y == last and len(next_list) == 1:
-      pairs.append(next_list[0])
-      break 
     if len(next_list) > 0:
       x = next_list[randselect(len(next_list))][0]
       mylist = remove_list(x, y, mylist)
