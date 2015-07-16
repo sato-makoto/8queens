@@ -13,9 +13,11 @@ for x in head:
 print html.h1_out(eq.width)
 print html.p_out()
 print html.first_line()
-html.table_first_line(eq.width)
+print html.table_first_line(eq.width)
 
-html.lines_out(mylist, eq.width)
+table_line = html.lines_out(mylist, eq.width)
+
+print table_line
 
 foot = html.html_footer()
 for x in foot:
