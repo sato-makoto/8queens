@@ -44,16 +44,19 @@ def remove_list(x, y, all_list):
       temp.remove(l)
   return temp
 
+def step(y, pairs, next_list, mylist):
+  x = next_list[randselect(len(next_list))][0]
+  mylist = remove_list(x, y, mylist)
+  pairs.append([x, y])
+  y+=1
+  return  y, pairs, mylist
 
 def main(width):
   x, y, pairs, mylist = allclear()
   while y < width:
     next_list = ylist(y, mylist)
     if len(next_list) > 0:
-      x = next_list[randselect(len(next_list))][0]
-      mylist = remove_list(x, y, mylist)
-      pairs.append([x, y])
-      y+=1
+       y, pairs, mylist = step(y, pairs, next_list, mylist) 
     else:
       x, y, pairs, mylist = allclear()
   return pairs
