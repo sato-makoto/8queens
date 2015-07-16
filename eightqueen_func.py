@@ -23,8 +23,7 @@ def makemylist():
   listz = []
   for f1 in range(width):
     for f2 in range(width):
-      pair = [f1, f2]
-      listz.append(pair)
+      listz.append([f1, f2])
   return listz
 
 def ylist(y, all_list):
