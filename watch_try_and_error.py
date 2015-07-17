@@ -9,22 +9,21 @@ def main(width):
   while y < eq.width:
 #    sleep(0.5) 
     next_list = eq.ylist(y, mylist)
-    if y == eq.last and len(next_list) == 1:
-      pairs.append(next_list[0])
-      break 
     if len(next_list) > 0:
       x = next_list[eq.randselect(len(next_list))][0]
       mylist = eq.remove_list(x, y, mylist)
       pairs.append([x, y])
+      temp = pairs[:]
       y+=1
-      print pairs
+      for z in range(eq.width - y):
+         temp.append([None, None])
+      print temp
     else:
       error += 1
-      print '{} times error!'.format(error) 
+#      print '{} times error!'.format(error) 
+#      print ''
       x, y, pairs, mylist = eq.allclear()
   return pairs
-
-
 
 x, y, pairs, mylist = eq.allclear()
 
