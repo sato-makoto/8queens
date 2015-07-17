@@ -36,10 +36,14 @@ def html_output(mylist):
     f.write(x[:-1])
   f.close()
 
+sleep(3)
 for x in large_list:
-  html_output(x)
-  browser.get('file://' +  working_dir + output_html)
-  sleep(2)
+  if x == [[]]:
+    sleep(10)
+  else:
+    html_output(x)
+    browser.get('file://' +  working_dir + output_html)
+    sleep(2)
 
 sleep(10)
 browser.close()
