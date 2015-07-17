@@ -3,8 +3,6 @@ from time import localtime
 import eightqueen_func as eq
 
 classtaple = ('none', 'left', 'white', 'gray')
-y, mo , d, h, m, s, n, n, n  =  localtime()    
-datestr = '{}年{}月{}日 {}時{}分{}秒'.format(y, mo, d, h, m, s)
 
 def html_header():
  header_file = 'html_header'
@@ -20,7 +18,9 @@ def h1_out(width):
  return '<h1>{} Queens</h1>'.format(eq.width)
 
 def p_out():
- return '<p> -- {}に作成しました</p>'.format(datestr)
+  y, mo , d, h, m, s, n, n, n  =  localtime()    
+  datestr = '{}年{}月{}日 {}時{}分{}秒'.format(y, mo, d, h, m, s)
+  return '<p> -- {}に作成しました</p>'.format(datestr)
 
 def first_line():
   return '<table summary="Queens">'
@@ -46,8 +46,8 @@ def lines_out(queens_list,width):
          q = '♛'
       else:
          q = ''
-      ret_str = ret_str + '  <td class="{}">{}</td>'.format(wglist[begin_color], q)
+      ret_str = ret_str + '  <td class="{}">{}</td>\n'.format(wglist[begin_color], q)
       begin_color = (begin_color + 1) % 2
-    ret_str = ret_str + '</tr>'
+    ret_str = ret_str + '</tr>\n'
    
   return ret_str
