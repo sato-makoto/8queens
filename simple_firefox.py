@@ -15,7 +15,7 @@ working_dir = os.getcwd() + '/'
 myqueen_html = 'foo.html'
 
 def make_matrix(dataline):
-  mylist = eq.main(eq.width)
+  mylist = dataline
   output = open(myqueen_html, 'w')
   head = html.html_header()
   for x in head:
@@ -36,8 +36,9 @@ def make_matrix(dataline):
 
 input = open(inputdata, 'r')
 
-for x in inputrite(range(10):
-  make_matrix(dline)
+for x in input.readlines():
+  make_matrix(x)
+  print x[:-1]
   browser.get('file://' +  working_dir + myqueen_html)
   sleep (3)
 browser.close()
