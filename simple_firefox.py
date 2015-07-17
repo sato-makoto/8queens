@@ -8,11 +8,13 @@ import os
 
 x, y, pairs, myset = eq.allclear()
 
+inputdata='data.txt'
+
 browser = webdriver.Firefox()
 working_dir = os.getcwd() + '/'
 myqueen_html = 'foo.html'
 
-def make_matrix():
+def make_matrix(dataline):
   mylist = eq.main(eq.width)
   output = open(myqueen_html, 'w')
   head = html.html_header()
@@ -32,8 +34,10 @@ def make_matrix():
     output.write(x[:-1])
   output.close()
 
-for x in range(10):
-  make_matrix()
+input = open(inputdata, 'r')
+
+for x in inputrite(range(10):
+  make_matrix(dline)
   browser.get('file://' +  working_dir + myqueen_html)
   sleep (3)
 browser.close()
