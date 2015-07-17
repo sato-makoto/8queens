@@ -44,6 +44,8 @@ def lines_out(queens_list,width):
          q = '♕'
       elif y[0] == x and begin_color%2 == 1:
          q = '♛'
+      elif y[0] == None:
+         q = '&nbsp;&nbsp;&nbsp;'
       else:
          q = ''
       ret_str = ret_str + '  <td class="{}">{}</td>\n'.format(wglist[begin_color], q)
