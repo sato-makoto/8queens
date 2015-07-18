@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import random
 from time import sleep
 import eightqueen_func as eq
@@ -15,17 +16,18 @@ def main(width):
       pairs.append([x, y])
       temp = pairs[:]
       y+=1
-      for z in range(eq.width - y):
-         temp.append([None, None])
+#      for z in range(eq.width - y):
+#         temp.append([None, None])
       print temp
     else:
       error += 1
-#      print '{} times error!'.format(error) 
-#      print ''
+      print '{} times error!'.format(error) 
+      print ''
       x, y, pairs, mylist = eq.allclear()
-  return pairs
+  return pairs, error
 
 x, y, pairs, mylist = eq.allclear()
 
-pairs =  main(eq.width)
+pairs, error =  main(eq.width)
+print '{}回のエラーを経て、ようやくできました'.format(error)
 print pairs
