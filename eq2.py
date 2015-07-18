@@ -16,7 +16,11 @@ ylist = []
 for x in range(eq.width):
   ylist.append('')
 
-queen = '♕'
+def queen_w_b(y):
+  if y%2:
+    return '♕'
+  else:
+    return '♛'
 
 xlist = []
 pref = suff = ''
@@ -25,9 +29,10 @@ for x in range(eq.width):
   suff = '| ' * (eq.width - 1 - x) + '|'
   xlist.append([pref,  suff])
 
-for x in range(eq.width):
-  yl = mylist[x][0]
-  ylist[yl] = xlist[x][0] + queen + xlist[x][1]
+for y in range(eq.width):
+  yl = mylist[y][0]
+  queen = queen_w_b(y)
+  ylist[yl] = xlist[y][0] + queen + xlist[y][1]
 
 print ynumstr
 num = 0
