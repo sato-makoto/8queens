@@ -1,12 +1,11 @@
 import random
+from time import sleep
+from Adafruit_LED_Backpack import Matrix8x8
 
-from sys import argv
-if len(argv) == 2 and argv[1].isdigit():
-  width = int(argv[1])
-else:
-  width = 8
-
+width = 8
 last = width - 1
+display = Matrix8x8.Matrix8x8()
+display.begin()
 
 def q0(x, y):
   if (x == 0) or (y == last):
@@ -84,7 +83,7 @@ def rest_line_length(y, setz):
       templist.append(z)
   return len(templist)
 
-def allclear():
+def allclean():
   x  = randselect(width)
   y = 0
   pairs = []
@@ -93,22 +92,29 @@ def allclear():
   return x, y, pairs, myset
 
 def get_queens_pattern():
-  x, y, pairs, myset = allclear()
+  error_time = 0
+  x, y, pairs, myset = allclean()
   while y < width:
-    if y == last and rest_line_length(y, myset) == 1:
-      temp = myset.pop()
-      x, y = int(temp[0]), int(temp[2])
+    if rest_line_length(y, myset):
+      mybatch(x, y, myset)
       pairs.append([x, y])
-      break
+      y+=1
+      yline = ylines(y, myset)
+      ylength = len(yline)
+      if ylength:
+        x = int(yline[randselect(ylength)][0])
     else:
-      if rest_line_length(y, myset):
-        mybatch(x, y, myset)
-        pairs.append([x, y])
-        y+=1
-        yline = ylines(y, myset)
-        ylength = len(yline)
-        if ylength:
-          x = int(yline[randselect(ylength)][0])
-      else:
-        x, y, pairs, myset = allclear()
-  return  pairs
+      error_time += 1
+      x, y, pairs, myset = allclean()
+  return  pairs, error_time
+
+def display_clear():
+  display.clear()
+  display.write_display()
+
+def on_off(qnum, wtime, flag):
+  for num in range(8):
+    x, y = qnum[num]
+    display.set_pixel(x, y, flag)
+    display.write_display()
+    sleep(wtime)
