@@ -20,10 +20,7 @@ def allclear():
   return x, y, pairs, mylist
 
 def makemylist():
-  listz = []
-  for f1 in range(width):
-    for f2 in range(width):
-      listz.append([f1, f2])
+  listz = [[x, y] for x in range(width) for y in range(width)]
   return listz
 
 def ylist(y, all_list):
