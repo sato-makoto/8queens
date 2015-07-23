@@ -11,6 +11,11 @@ sleep(1)
 eq.display_clear()
 sleep(0.5)
 
-de.on(mylist[::3])
-sleep(2)
+alist = [[5, 5]]
+de.on(alist)
+sleep(1)
+eq.display_clear()
+
+de.neg_on(alist)
+sleep(1)
 eq.display_clear()
