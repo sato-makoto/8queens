@@ -11,6 +11,8 @@ def display_clear():
   display.clear()
   display.write_display()
 
+display_clear()
+
 def on_off(qnum, wtime, flag):
   for num in range(8):
     x, y = qnum[num]
@@ -72,3 +74,4 @@ def main():
       error_time += 1
       x, y, pairs, mylist = allclear()
   return pairs, error_time
+
