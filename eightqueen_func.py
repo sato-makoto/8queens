@@ -1,5 +1,6 @@
 import random
 from time import sleep
+import all_list as all
 from Adafruit_LED_Backpack import Matrix8x8
 
 width = 8
@@ -27,25 +28,19 @@ def randselect(n):
 def allclear():
   x, y = 0, 0
   pairs = []
-  mylist = []
-  mylist = makemylist()
+  mylist = all.all_list
   return x, y, pairs, mylist
 
-def makemylist():
-  listz = [[x, y] for x in range(width)
-   for y in range(width)]
-  return listz
-
-def ylist(y, all_list):
+def ylist(y, a_list):
   tlist = []
-  for l in all_list:
+  for l in a_list:
      if l[1] == y:
         tlist.append(l)
   return tlist
        
-def remove_list(x, y, all_list):
-  temp = all_list[:]
-  for l in all_list:
+def remove_list(x, y, a_list):
+  temp = a_list[:]
+  for l in a_list:
     if temp.count(l) and l[0] == x:
       temp.remove(l)
     if temp.count(l) and l[1] == y:
@@ -72,4 +67,3 @@ def main():
       error_time += 1
       x, y, pairs, mylist = allclear()
   return pairs, error_time
-
