@@ -2,13 +2,13 @@
 from time import sleep
 import delax_func as de
 import eightqueen_func as  eq
-
-mylist = eq.makemylist()
+import all_list as all
 
 de.line_on_off(3, 0.1, 1)
 de.line_on_off(3, 0.1, 0)
 
-"""
+mylist = all.all_list[:]
+
 de.on(mylist)
 sleep(1)
 
@@ -23,5 +23,3 @@ for x in range(10):
   de.neg_on(alist)
   sleep(0.2)
   eq.display_clear()
-"""
-
