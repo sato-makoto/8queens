@@ -11,6 +11,6 @@ for x in range(10):
  de.on(queen_pattern)
  sleep(0.7)
  de.neg_on(queen_pattern)
- sleep(0.3)
+ sleep(0.7)
 
 eq.display_clear()
