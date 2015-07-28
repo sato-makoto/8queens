@@ -16,10 +16,16 @@ def on(list):
     display.set_pixel(num[0], num[1], 1)
   display.write_display()
 
+def ok_on(oklist, flag):
+  display.clear()
+  for l in oklist:
+    display.set_pixel(l[0], l[1], flag)
+  display.write_display()
+
 def neg_on(list):
   display.clear()
   for w in all.all_list:
-    display.set_pixel(w[0], w[1], 1)
+    display.set_pixel(w[1], w[0], 1)
   for z in list:
     display.set_pixel(z[0], z[1], 0)
   display.write_display()
