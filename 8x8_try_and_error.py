@@ -43,7 +43,7 @@ def try_and_error_main():
        eq.display.write_display()
        sleep(0.1)
     else:
-      sleep(sleeptime)
+      sleep(sleeptime * 2)
       ok_no_on_off(nolist)
       error_time += 1
       x, y, pairs, mylist = eq.allclear()
